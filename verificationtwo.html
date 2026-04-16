@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FemWay - ID Upload</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <div class="iphone-13">
+        <div class="notch"></div>
+
+        <header class="header">
+            <div class="header-top">
+                <i class="ph ph-caret-left"></i>
+                <div class="header-text">
+                    <h2>Identity Verification</h2>
+                    <span>Step 1 of 2</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 50%;"></div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="step-title fade-in">
+                <div class="step-number">1</div>
+                <h1>National ID Verification</h1>
+            </section>
+            <p class="subtitle fade-in">Upload a clear photo of your government-issued ID card</p>
+
+            <div class="tips-box slide-up">
+                <h3>Tips for best results:</h3>
+                <ul>
+                    <li>Ensure all text is clearly visible</li>
+                    <li>Avoid glare and shadows</li>
+                    <li>Place ID on a dark background</li>
+                    <li>Make sure the ID is not expired</li>
+                </ul>
+            </div>
+
+            <div class="upload-area slide-up" id="dropzone">
+                <input type="file" id="fileInput" hidden accept="image/*">
+                <div class="upload-content" onclick="document.getElementById('fileInput').click()">
+                    <i class="ph ph-camera"></i>
+                    <h3>Take Photo of ID</h3>
+                    <p>or tap to upload from gallery</p>
+                </div>
+            </div>
+
+            <div class="button-group slide-up">
+                <button class="btn-secondary">Back</button>
+                <button class="btn-primary disabled">Next</button>
+            </div>
+        </main>
+
+        <nav class="nav-bar">
+            <div class="nav-item"><i class="ph ph-house"></i><span>Home</span></div>
+            <div class="nav-item active"><i class="ph ph-calendar-blank"></i><span>Book</span></div>
+            <div class="nav-item"><i class="ph ph-clock-counter-clockwise"></i><span>Rides</span></div>
+            <div class="nav-item"><i class="ph ph-user"></i><span>Profile</span></div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

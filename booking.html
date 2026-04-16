@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FemWay - Book a Ride</title>
+    <link rel="stylesheet" href="book.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <div class="iphone-13">
+        <div class="notch"></div>
+
+        <header class="header">
+            <h1>Book a Ride</h1>
+        </header>
+
+        <main class="content">
+            <section class="booking-card slide-up">
+                <div class="input-group">
+                    <label>Pickup Location</label>
+                    <div class="input-wrapper">
+                        <i class="ph ph-map-pin green"></i>
+                        <input type="text" placeholder="Enter pickup point">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Drop-off Location</label>
+                    <div class="input-wrapper">
+                        <i class="ph ph-map-pin burgundy"></i>
+                        <input type="text" placeholder="Enter destination">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label>Select Date</label>
+                        <div class="input-wrapper">
+                            <i class="ph ph-calendar-blank"></i>
+                            <input type="text" placeholder="DD/MM/YYYY">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Select Time</label>
+                        <div class="input-wrapper">
+                            <i class="ph ph-clock"></i>
+                            <input type="text" placeholder="--:--">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <h2 class="section-title">Available Routes</h2>
+
+            <div class="routes-container">
+                <div class="route-card slide-up" style="--delay: 0.1s">
+                    <div class="route-info">
+                        <div class="locations">
+                            <div class="loc-item"><span class="dot green"></span> Downtown Mall</div>
+                            <div class="loc-item"><span class="dot burgundy"></span> University Campus</div>
+                        </div>
+                        <div class="price">25 EGP</div>
+                    </div>
+                    <div class="route-footer">
+                        <div class="stats">
+                            <span><i class="ph ph-clock"></i> 09:00 AM</span>
+                            <span><i class="ph ph-users"></i> 3 seats</span>
+                            <span>25 min</span>
+                        </div>
+                        <button class="btn-book">Book <i class="ph ph-caret-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="route-card slide-up" style="--delay: 0.2s">
+                    <div class="route-info">
+                        <div class="locations">
+                            <div class="loc-item"><span class="dot green"></span> Downtown Mall</div>
+                            <div class="loc-item"><span class="dot burgundy"></span> University Campus</div>
+                        </div>
+                        <div class="price">25 EGP</div>
+                    </div>
+                    <div class="route-footer">
+                        <div class="stats">
+                            <span><i class="ph ph-clock"></i> 10:30 AM</span>
+                            <span><i class="ph ph-users"></i> 5 seats</span>
+                            <span>25 min</span>
+                        </div>
+                        <button class="btn-book">Book <i class="ph ph-caret-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <nav class="nav-bar">
+          <a href="Home.html"> <div class="nav-item"><i class="ph ph-house"></i><span>Home</span></div> </a> 
+         <a href="booking.html"> <div class="nav-item active"><i class="ph-fill ph-calendar-blank"></i><span>Book</span></div> </a> 
+          <a href="notifications.html">  <div class="nav-item"><i class="ph ph-clock-counter-clockwise"></i><span>Notifications</span></div> </a>
+          <a href="profile.html"> <div class="nav-item"><i class="ph ph-user"></i><span>Profile</span></div> </a> 
+        </nav>
+    </div>
+
+</body>
+</html>

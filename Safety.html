@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Femway | Safety Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="iphone-13">
+        <div class="notch"></div>
+        
+        <div class="header">
+            <div class="header-top">
+                <i class="fas fa-chevron-left"></i>
+                <div class="header-text">
+                    <h2>Safety Center</h2>
+                    <span>Real-time safety monitoring</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content fade-in">
+            <div class="section-header">
+                <h3>Safety Features</h3>
+                <button id="sosTrigger" class="btn-sos-trigger-sm">Trigger SOS</button>
+            </div>
+
+            <div class="safety-toggle-item slide-up" style="--delay: 0.1s">
+                <div class="item-left">
+                    <div class="icon-box soft-red"><i class="fas fa-shield-alt"></i></div>
+                    <div class="text-box">
+                        <h3>Ride Sharing</h3>
+                        <p>Share ride details with trusted contacts</p>
+                    </div>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider-round"></span>
+                </label>
+            </div>
+
+            <div class="safety-toggle-item slide-up" style="--delay: 0.2s">
+                <div class="item-left">
+                    <div class="icon-box soft-red"><i class="fas fa-exclamation-circle"></i></div>
+                    <div class="text-box">
+                        <h3>SOS Button</h3>
+                        <p>Quick access to emergency services</p>
+                    </div>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider-round"></span>
+                </label>
+            </div>
+
+            <div class="safety-toggle-item slide-up" style="--delay: 0.3s">
+                <div class="item-left">
+                    <div class="icon-box soft-red"><i class="fas fa-phone-alt"></i></div>
+                    <div class="text-box">
+                        <h3>24/7 Support</h3>
+                        <p>Direct line to Femway safety team</p>
+                    </div>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider-round"></span>
+                </label>
+            </div>
+
+            <div class="section-header mt-20">
+                <h3>Trusted Contacts</h3>
+                <button class="btn-add-contact-sm"><i class="fas fa-plus"></i> Add New</button>
+            </div>
+
+            <div id="contactList">
+                <div class="contact-card slide-up" style="--delay: 0.4s">
+                    <div class="contact-info">
+                        <div class="contact-avatar">M</div>
+                        <div class="contact-details">
+                            <h4>Mom</h4>
+                            <p>+01233344455 • Mother</p>
+                        </div>
+                    </div>
+                    <button class="btn-delete-contact"><i class="far fa-trash-alt"></i></button>
+                </div>
+
+                <div class="contact-card slide-up" style="--delay: 0.5s">
+                    <div class="contact-info">
+                        <div class="contact-avatar">B</div>
+                        <div class="contact-details">
+                            <h4>Bahaa</h4>
+                            <p>+20 1142226527 • Friend</p>
+                        </div>
+                    </div>
+                    <button class="btn-delete-contact"><i class="far fa-trash-alt"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="nav-item"><i class="fas fa-home"></i><span>Home</span></div>
+            <div class="nav-item"><i class="fas fa-calendar-alt"></i><span>Book</span></div>
+            <div class="nav-item"><i class="fas fa-history"></i><span>Rides</span></div>
+            <div class="nav-item active"><i class="fas fa-shield-alt"></i><span>Safety</span></div>
+            <div class="nav-item"><i class="fas fa-user"></i><span>Profile</span></div>
+        </nav>
+
+        <div id="sosOverlay" class="sos-overlay hidden">
+            <i class="fas fa-exclamation-triangle pulse"></i>
+            <h1>Emergency Active</h1>
+            <p>Authorities and contacts are being notified.</p>
+            <button onclick="toggleSOS()" class="btn-cancel-sos">Cancel Alert</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
