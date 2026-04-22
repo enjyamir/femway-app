@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FemWay - Home Screen</title>
+    <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="home.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
@@ -14,9 +16,7 @@
 
         <header class="header fade-in">
             <div class="user-profile">
-                <div class="avatar-placeholder">
-                    <i class="ph-fill ph-user"></i>
-                </div>
+                <div class="avatar-placeholder"><i class="ph-fill ph-user"></i></div>
                 <div class="welcome-text">
                     <span>Welcome back,</span>
                     <h2>Sarah Mohammed</h2>
@@ -27,19 +27,15 @@
 
         <div class="map-view fade-in">
             <img src="images/Screenshot 2026-03-31 at 3.40.59 PM.png" alt="Map" class="map-img">
-            
-            <div class="search-bar slide-up">
+            <div class="search-bar">
                 <i class="ph ph-magnifying-glass"></i>
                 <span>Where to, Sarah?</span>
             </div>
         </div>
 
         <main class="main-content">
-            
             <section class="section slide-up" style="--delay: 0.1s">
-                <div class="section-title">
-                    <h3>Top Rated Drivers Near You</h3>
-                </div>
+                <div class="section-title"><h3>Top Rated Drivers Near You</h3></div>
                 <div class="horizontal-scroll">
                     <div class="driver-card">
                         <img src="https://api.dicebear.com/8.x/notionists/svg?seed=Elena" alt="Elena">
@@ -59,50 +55,36 @@
             </section>
 
             <section class="section slide-up" style="--delay: 0.2s">
-                <div class="moto-ad">
-                    <div class="ad-text">
-                        <span class="badge">NEW</span>
-                        <h4>FemWay Moto Delivery</h4>
-                        <p>Fast, agile parcel delivery.</p>
-                    </div>
-                    <i class="ph ph-package animated-icon"></i>
+                <div class="sketchfab-embed-wrapper"> 
+                    <model-viewer 
+                        src="3d/vw_t1_style_bus_free.glb" 
+                        autoplay 
+                        auto-rotate 
+                        shadow-intensity="1" 
+                        camera-controls 
+                        touch-action="pan-y">
+                    </model-viewer>
                 </div>
             </section>
 
             <section class="section slide-up" style="--delay: 0.3s">
-                <div class="section-title">
-                    <h3>Choose Service</h3>
-                </div>
+                <div class="section-title"><h3>Choose Service</h3></div>
                 <div class="package-grid">
                     <div class="package-card active">
-                   
+                        <div class="icon-wrapper"><i class="ph ph-bus iconz"></i></div>
                         <span>Eco Ride</span>
-                        <img src="icons/bus.png" class="iconz">
                     </div>
-                    <div class="package-card" id="moto-trigger">
-                        <i class="ph ph-motorbike"></i>
+                    <a href="moto_ship.html" class="package-card" style="text-decoration: none;">
+                        <div class="icon-wrapper"><i class="ph ph-motorcycle iconz"></i></div>
                         <span>Moto-Shipping</span>
-<img src="icons/ph_motorcycle.png" class="iconz">
-                    </div>
+                    </a>
                     <div class="package-card">
-                        
-        
+                        <div class="icon-wrapper"><i class="ph ph-crown iconz"></i></div>
                         <span>Premium</span>
-                        <img src="icons/premium.png" class="iconz">
                     </div>
                 </div>
             </section>
-
         </main>
-
-        <nav class="bottom-nav fade-in">
-          <a href="Home.html"> <div class="nav-btn active"><i class="ph-fill ph-house"></i><span>Home</span></div> </a>
-           <a href="booking.html"> <div class="nav-btn"><i class="ph ph-calendar-blank"></i><span>Book</span></div> </a>
-            <a href="safety.html"><div class="nav-btn"><i class="ph ph-clock-counter-clockwise"></i><span>Safety</span></div> </a>
-         <a href="profile.html">  <div class="nav-btn"><i class="ph ph-user"></i><span>Profile</span></div> </a> 
-        </nav>
     </div>
-
-    <script src="home.js"></script>
 </body>
 </html>

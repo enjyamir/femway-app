@@ -928,3 +928,192 @@ input:checked + .slider-round:before { transform: translateX(20px); }
 }
 
 a {text-decoration: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Shipping Specific Styles --- */
+
+.shipping-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.step {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #E5E7EB;
+    color: #9CA3AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.step.active {
+    background: var(--vibrant-red);
+    color: white;
+}
+
+.step-line {
+    width: 40px;
+    height: 2px;
+    background: #E5E7EB;
+    margin: 0 10px;
+}
+
+.shipping-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--light-pink);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-sub);
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #E5E7EB;
+    background: #F9FAFB;
+    font-family: inherit;
+}
+
+.shipping-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    border: 1px solid var(--light-pink);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.shipping-option.selected {
+    border-color: var(--vibrant-red);
+    background: var(--light-pink);
+}
+
+.option-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.price-tag {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--burgundy);
+}
+
+.btn-primary-ship {
+    width: 100%;
+    background: var(--burgundy);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary-ship:hover {
+    background: var(--vibrant-red);
+}
+
+.moto {font-size: 24px; color: var(--burgundy); margin-bottom: 8px; display: flex; justify-content:center; align-items: center;}
+
+.sketchfab-embed-wrapper {
+    width: 100%;
+    height: 400px; /* Essential: The container needs a height */
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Keeps it clean */
+}
+
+/* If using Option 2, add this */
+model-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+/* 1. Ensure the phone container doesn't let items grow infinitely */
+.iphone-13 {
+    width: 390px; 
+    height: 844px;
+    display: flex; 
+    flex-direction: column; /* Stack header, map, and main content */
+    overflow: hidden;
+    position: relative;
+}
+
+/* 2. Fix the Map (The "trapped" content culprit) */
+.map-view { 
+    position: relative; 
+    height: 240px;          /* Give it a fixed height */
+    min-height: 240px;      /* Ensure it doesn't collapse */
+    flex-shrink: 0;         /* CRITICAL: Prevents map from pushing everything else out */
+    z-index: 5;
+}
+
+/* 3. Fix the Main Content */
+.main-content { 
+    flex: 1;                /* Takes up all remaining space */
+    overflow-y: auto;       /* Allows you to scroll to see the drivers and the bus */
+    padding: 40px 20px; 
+    background: var(--gray-bg);
+    z-index: 1;
+}
+

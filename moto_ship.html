@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Femway | Moto Ship</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="iphone-13">
+        <div class="notch"></div>
+        
+        <div class="header">
+            <div class="header-top">
+                <i class="fas fa-chevron-left" onclick="window.location.href='home.html'"></i>
+                <div class="header-text">
+                    <h2>Motorcycle Shipping</h2>
+                    <span>Safe transport for your bike</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content fade-in">
+            <div class="shipping-steps">
+                <div class="step active"><i class="fas fa-motorcycle"></i></div>
+                <div class="step-line"></div>
+                <div class="step"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="step-line"></div>
+                <div class="step"><i class="fas fa-credit-card"></i></div>
+            </div>
+
+            <div class="section-header mt-20">
+                <h3>Bike Information</h3>
+            </div>
+
+            <div class="shipping-card slide-up" style="--delay: 0.1s">
+                <div class="input-group">
+                    <label>Motorcycle Model</label>
+                    <input type="text" placeholder="e.g. Vespa Primavera 150">
+                </div>
+                <div class="input-group">
+                    <label>Engine Capacity (CC)</label>
+                    <input type="number" placeholder="150">
+                </div>
+            </div>
+
+            <div class="section-header mt-20">
+                <h3>Shipping Method</h3>
+            </div>
+
+            <div class="shipping-option slide-up selected" style="--delay: 0.2s">
+                <div class="option-content">
+                    <div class="icon-box soft-red"><i class="fas fa-truck"></i></div>
+                    <div class="text-box">
+                        <h3>Enclosed Transport</h3>
+                        <p>Maximum protection from weather</p>
+                    </div>
+                </div>
+                <span class="price-tag">+ $45</span>
+            </div>
+
+            <div class="shipping-option slide-up" style="--delay: 0.3s">
+                <div class="option-content">
+                    <div class="icon-box soft-red"><i class="fas fa-shuttle-van"></i></div>
+                    <div class="text-box">
+                        <h3>Standard Tow</h3>
+                        <p>Open-air hydraulic lift towing</p>
+                    </div>
+                </div>
+                <span class="price-tag">Included</span>
+            </div>
+
+            <div class="safety-toggle-item slide-up" style="--delay: 0.4s">
+                <div class="item-left">
+                    <div class="icon-box soft-red"><i class="fas fa-user-shield"></i></div>
+                    <div class="text-box">
+                        <h3>Premium Insurance</h3>
+                        <p>Full coverage during transit</p>
+                    </div>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider-round"></span>
+                </label>
+            </div>
+
+            <button class="btn-primary-ship mt-20">Select Pickup Location</button>
+        </div>
+
+        <nav class="nav-bar">
+          <a href="Home.html"> <div class="nav-item"><i class="fas fa-home"></i><span>Home</span></div> </a> 
+          <a href="booking.html">  <div class="nav-item active"><i class="fas fa-calendar-alt"></i><span>Book</span></div> </a>
+           <div class="nav-item"><i class="fas fa-history"></i><span>Rides</span></div>
+         <a href="Safety.html">  <div class="nav-item"><i class="fas fa-shield-alt"></i><span>Safety</span></div> </a> 
+         <a href="profile.html">    <div class="nav-item active"><i class="ph-fill ph-user"></i><span>Profile</span></div> </a>
+        </nav>
+    </div>
+</body>
+</html>

@@ -48,10 +48,10 @@ body {
     position: absolute; bottom: -25px; left: 20px; right: 20px;
     background: white; padding: 16px 20px; border-radius: 16px;
     display: flex; align-items: center; gap: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); cursor: pointer; z-index: 1000;
 }
-.search-bar i { color: var(--vibrant-red); font-size: 20px; }
-.search-bar span { color: var(--burgundy); font-weight: 500; }
+.search-bar i { color: var(--vibrant-red); font-size: 20px;z-index: 100; }
+.search-bar span { color: var(--burgundy); font-weight: 500; z-index: 100;}
 
 /* Content */
 .main-content { padding: 45px 20px 100px; flex: 1; overflow-y: auto; background: var(--gray-bg); }
@@ -105,3 +105,60 @@ body {
 @keyframes fadeIn { to { opacity: 1; } }
 @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+
+/* Fix Map View to ensure Search Bar doesn't hide text below it */
+.map-view { 
+    position: relative; 
+    height: 240px; 
+    flex-shrink: 0; /* Prevents map from squishing */
+    z-index: 5;
+}
+
+/* Fix Search Bar */
+.search-bar {
+    position: absolute; 
+    bottom: -20px; 
+    left: 20px; 
+    right: 20px;
+    background: white; 
+    padding: 14px 20px; 
+    border-radius: 14px;
+    display: flex; 
+    align-items: center; 
+    gap: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+    z-index: 10;
+}
+
+/* Fix Content Padding (increased top padding to clear search bar) */
+.main-content { 
+    padding: 40px 20px 40px; 
+    flex: 1; 
+    overflow-y: auto; 
+    background: var(--gray-bg); 
+}
+
+/* Fix 3D Wrapper */
+.sketchfab-embed-wrapper {
+    width: 100%;
+    height: 250px; /* Reduced height to fit phone screen better */
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+    --poster-color: transparent;
+}
+
+/* Fix Service Icons */
+.iconz {
+    font-size: 28px;
+    color: var(--vibrant-red);
+    margin-bottom: 5px;
+}
